@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Course plan (ApplStat + SmB I)</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Practical information (only SmB I)</a>
+</li>
+<li>
+  <a href="courseplan.html">Course plan (ApplStat + SmB I)</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Course plan (ApplStat + SmB I)</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#overview-of-course">Overview of course</a></li>
+<li><a href="#details-for-each-day-of-the-course">Details for each day of the course</a><ul>
+<li><a href="#week1">Day 1: November 18, 2020</a></li>
+<li><a href="#week2">Day 2: November 25, 2020</a></li>
+<li><a href="#week3">Day 3: December 2, 2020 (NB: Change of program!)</a></li>
+<li><a href="#week4">Day 4: December 9, 2020</a></li>
+<li><a href="#week5">Day 5: December 16, 2020</a></li>
+<li><a href="#week6">Day 6: January 6, 2021</a></li>
+</ul></li>
+</ul>
+</div>
+
+<hr />
+<div id="overview-of-course" class="section level1">
+<h1>Overview of course</h1>
+<p><strong>Note:</strong> Lectures and exercises classes are both for master students enrolled in the course <a href="https://kurser.ku.dk/course/nmak14003u">Applied Statistics, block 2, 2020</a> and for PhD students on <a href="https://phdcourses.ku.dk/DetailKursus.aspx?id=106180&amp;sitepath=NAT">Statistical methods for the Biosciences I, block 2, 2020</a>.</p>
+<ul>
+<li><strong>Lecturer / course responsable:</strong> Anders Tolver (<a href="mailto:tolver@math.ku.dk" class="email">tolver@math.ku.dk</a>)</li>
+<li><strong>Teaching Assistants:</strong> Phillip Bredahl Mogensen (<a href="mailto:pbm@math.ku.dk" class="email">pbm@math.ku.dk</a>) + Bo Markussen (<a href="mailto:bomar@math.ku.dk" class="email">bomar@math.ku.dk</a>)</li>
+<li>Lectures are given online using Zoom on Wednesdays starting on November 18 at 9:00 AM. (A link for the Zoom meetings will be made available here!)</li>
+<li>Exercise classes are held online using Zoom on Wednesdays starting on November 18.</li>
+<li>The exercise sheets and the lecture slides will be uploaded before each course day.</li>
+<li><strong>Book:</strong> Martinussen, Skovgaard, Sørensen: A first guide to statistical computations in R, Biofolia 2012, ISBN 978-87-913-1956-3. Your old textbook on introductory statistics (whatever that is) might also be usefull.</li>
+<li><strong>Zipped file with data for the book</strong> <a href="data/Guide1data.zip">Guide1data.zip</a>. Download and unzip the file to get a folder <code>Guide1data</code> containing the datasets from the book. To load a particular dataset from an R session you may use a command like <code>load("beedata.rda")</code>. If you are working in R from the directory that contains the <code>Guide1data</code> folder you have to write <code>load("Guide1data/beedata.rda")</code>. Use <code>Session -&gt; Set Working Directory</code> from the top menu of RStudio to change the current Working Directory if necessary.</li>
+</ul>
+<table>
+<colgroup>
+<col width="30%" />
+<col width="9%" />
+<col width="15%" />
+<col width="21%" />
+<col width="24%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Session number</th>
+<th>Date</th>
+<th>Topic</th>
+<th>Book pages</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>November 18, 2020</td>
+<td>Basic principles</td>
+<td>Chapters 1, 3, and 4</td>
+<td><a href="#week1">link</a></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>November 25, 2020</td>
+<td>Counts and proportions</td>
+<td>Chapter 6 (possibly skipping 6.1 and 6.3)</td>
+<td><a href="#week2">link</a></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>December 2, 2020</td>
+<td>Categorical regression</td>
+<td>Chapter 10 (skipping 10.1.2 and 10.1.3)</td>
+<td><a href="#week3">link</a></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>December 9, 2020</td>
+<td>Regression analysis + Analysis of Variance</td>
+<td>Chapters 7</td>
+<td><a href="#week4">link</a></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>December 16, 2020</td>
+<td>Random effects + Repeated measurements</td>
+<td>Chapter 9 (skipping 9.4, 9.6 and 9.7)</td>
+<td><a href="#week5">link</a></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>January 6, 2021</td>
+<td>Non-linear regression + Design of Experiments + Mediation and Confounding</td>
+<td>Chapters 11</td>
+<td><a href="#week6">link</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+<div id="details-for-each-day-of-the-course" class="section level1">
+<h1>Details for each day of the course</h1>
+<div id="week1" class="section level2">
+<h2>Day 1: November 18, 2020</h2>
+<p>Link to <a href="https://ucph-ku.zoom.us/j/65416958807">online teaching (lectures)</a></p>
+<p>Link to <a href="https://ucph-ku.zoom.us/j/65416958807">online teaching (exercise classes at 12:45)</a></p>
+<p>Link to <a href="https://ucph-ku.zoom.us/j/9947189040">online teaching (exercise with TA / Phillip)</a></p>
+<p><strong>I suggest that you always start by using the first link for exercise classes when you log on at 12:45!</strong></p>
+<p>Slides</p>
+<ul>
+<li><a href="slides/day1.pdf">day1 (for screen)</a></li>
+<li><a href="slides/day1_handout.pdf">day1_handout (for print)</a></li>
+</ul>
+<p>Exercise sheet</p>
+<ul>
+<li><a href="exercises/ex_day1.pdf">Exercises for Day 1</a></li>
+<li><a href="exercises/ggplot2_exercise.pdf">Exercise about ggplot2</a></li>
+<li><em>Optional Exercise</em> if you want to use the R Markdown format instead of just R scripts: <a href="exercises/rmarkdown.pdf">rmarkdown.pdf</a></li>
+</ul>
+<p>Data (from lectures and exercises)</p>
+<ul>
+<li>Tenderness of pork meat (from Exercise 1.2): <a href="data/dataExample2.txt">dataExample2.txt</a> - <a href="data/dataExample2.xls">dataExample2.xls</a></li>
+<li>Phosphor concentration in lakes: <a href="data/lakes.xlsx">lakes.xlsx</a></li>
+<li>Hypertenstion in diabetic patients: <a href="data/hypertension.xls">hypertension.xls</a> - <a href="data/hypertension.RData">hypertension.Rdata (RData - file)</a></li>
+</ul>
+<p>R - programs (for lectures and some exercises)</p>
+<ul>
+<li>Feeding concentrate and milk yield: <a href="R/feed_concentrate.R">feed_concentrate.R</a></li>
+<li>Data example 1 from slides (<em>Change in glucose level</em>): <a href="R/glucose.R">glucose.R</a></li>
+<li>Data example 3 from slides (<em>Phosphor concentration in lakes</em>): <a href="R/lakes.R">lakes.R</a></li>
+<li>Part of the solution to Exercise 1.5: <a href="R/hint1_5.R">hint1_5.R</a></li>
+</ul>
+</div>
+<div id="week2" class="section level2">
+<h2>Day 2: November 25, 2020</h2>
+<p>Link to <a href="https://ucph-ku.zoom.us/j/65416958807">online teaching (lectures)</a></p>
+<p>Link to <a href="https://ucph-ku.zoom.us/j/68691686847">online teaching (exercise classes at 12:45 by Bo Markussen)</a></p>
+<p>Link to <a href="https://ucph-ku.zoom.us/j/67209665428">online teaching (exercise classes at 12:45 by Phillip)</a></p>
+<p><strong>LabApplStat R-package (by Bo Markussen)</strong></p>
+<p>Bo Markussen (who developed the teaching material for this course) has created an R-package <code>LabApplStat</code> that you are asked to install on your computer.</p>
+<p>If you are using the latest version of R (4.0.3), and you have installed the <code>devtools</code> R-package on your computer, then you should be able to install <code>LabApplStat</code> directly from github by running</p>
+<pre class="r"><code>devtools::install_github(&quot;bomarkussen/LabApplStat&quot;,upgrade=&quot;never&quot;)</code></pre>
+<p>You may also save the following <a href="data/LabApplStat_1.4.0.tar.gz">tar.gz-file</a> and install the package by running</p>
+<pre class="r"><code>install.packages(&quot;myfolder/LabApplStat_1.4.0.tar.gz&quot;, repos = NULL, type = &quot;source&quot;)</code></pre>
+<p><strong>Slides</strong></p>
+<ul>
+<li><a href="slides/day2.pdf">day2 (for screen)</a></li>
+<li><a href="slides/day2_handout.pdf">day2_handout (for print)</a></li>
+</ul>
+<p><strong>Papers</strong></p>
+<ul>
+<li><em>Sifting the evidence—what’s wrong with significance tests?</em>: <a href="papers/Sifting_the_evidence.pdf">Sifting the evidence</a></li>
+<li><em>Beyond Power Calculations: Assessing Type S (Sign) and Type M (Magnitude) Errors</em>: <a href="papers/TypeS_M_error.pdf">Type S M error</a></li>
+</ul>
+<p><strong>Exercise sheet</strong></p>
+<ul>
+<li><a href="exercises/ex_day2.pdf">Exercises for Day 2</a></li>
+</ul>
+<p><strong>Data (from lectures and exercises)</strong></p>
+<ul>
+<li>Eye-testing: <a href="data/vision.xlsx">vision.xlsx</a></li>
+<li>Tenderness of pork meat (from Exercise 2.1): <a href="data/dataExample2.txt">dataExample2.txt</a> - <a href="data/dataExample2.xls">dataExample2.xls</a></li>
+<li>Dramanine as a remedy against seasickness (from Exercise 2.3): <a href="data/dramanine.txt">dramanine.txt</a></li>
+<li>Discretization of continuous variables (from Exercise 2.7): <a href="data/Galton.txt">Galton.txt</a></li>
+</ul>
+<p><strong>R - programs (for lectures and some exercises)</strong></p>
+<ul>
+<li>Density of nerve cells (Data example 2 from Day 1): <a href="R/cellDensity.R">cellDensity.R</a></li>
+<li>Avadex given to mice: <a href="R/avadex.R">avadex.R</a></li>
+<li>Activity of chicken: <a href="R/chicken.R">chicken.R</a></li>
+<li>Solution to <a href="R/solution2_5.R">Exercise 2.5</a></li>
+</ul>
+</div>
+<div id="week3" class="section level2">
+<h2>Day 3: December 2, 2020 (NB: Change of program!)</h2>
+<p><strong>Important:</strong></p>
+<p><strong>Exercise classes on December 2, 2020 are cancelled.</strong> Lectures have been moved until afternoon (12:45) and you have to use the <a href="https://ucph-ku.zoom.us/j/67398147663">following link</a>.</p>
+<!--
+Link to [online teaching (lectures)](https://ucph-ku.zoom.us/j/65416958807) 
+
+Link to [online teaching (exercise classes at 12:45 by Bo Markussen)](https://ucph-ku.zoom.us/j/68691686847) 
+
+Link to [online teaching (exercise classes at 12:45 by Phillip)](https://ucph-ku.zoom.us/j/67209665428)
+-->
+<p><strong>Slides</strong></p>
+<ul>
+<li><a href="slides/day3.pdf">day3 (for screen)</a></li>
+<li><a href="slides/day3_handout.pdf">day3_handout (for print)</a></li>
+</ul>
+<p><strong>Exercise sheet</strong></p>
+<ul>
+<li><a href="exercises/ex_day3.pdf">Exercises for Day 3</a></li>
+</ul>
+<p><strong>Data (from lectures and exercises)</strong></p>
+<ul>
+<li><p>Mortality of beetles (Data example 1 - to be used also for Exercise 3.1): <a href="data/beetle.txt">beetle.txt</a> - <a href="data/beetle_long.txt">beetle_long.txt</a> - <a href="data/beetle_verylong.txt">beetle_verylong.txt</a></p></li>
+<li><p>Risk of company default (Data example 2): <a href="data/Company_default.csv">Company_default.csv</a></p></li>
+<li><p>Hypertension (Data example 3): <a href="data/hypertension.txt">hypertension.txt</a></p></li>
+<li><p>Taste of cheese (Data example 4): <a href="data/cheese.txt">cheese.txt</a></p></li>
+<li><p>Number of greenflies on lettuce leaves (Data example 5): <a href="data/greenflies.txt">greenflies.txt</a></p></li>
+<li><p>Data for Exercise 3.3: <a href="data/GLA.txt">GLA.txt</a></p></li>
+<li><p>Data for Exercise 3.4: <a href="data/walks.txt">walks.txt</a></p></li>
+<li><p>Data for Exercise 3.5: <a href="data/particles.txt">particles.txt</a></p></li>
+</ul>
+<p><strong>R - programs (for lectures and some exercises)</strong></p>
+<ul>
+<li><p>Mortality of beetles (Data example 1): <a href="R/beetle.R">beetle.R</a></p></li>
+<li><p>Risk of company default (Data example 2): <a href="R/Company_default.R">Company_default.R</a></p></li>
+<li><p>Hypertension (Data example 3): <a href="R/hypertension.R">hypertension.R</a></p></li>
+<li><p>Taste of cheese (Data example 4): <a href="R/cheese.R">cheese.R</a></p></li>
+<li><p>Number of greenflies on lettuce leaves (Data example 5): <a href="R/greenflies.R">greenflies.R</a></p></li>
+<li><p>R-script to be used for Exercise 3.2: <a href="R/exercise3_2.R">exercise3_2.R</a></p></li>
+<li><p>Solution to Exercise 3.2: <a href="R/solution3_2.R">solution3_2.R</a></p></li>
+</ul>
+</div>
+<div id="week4" class="section level2">
+<h2>Day 4: December 9, 2020</h2>
+<p>Link to <a href="https://ucph-ku.zoom.us/j/65416958807">online teaching</a></p>
+<p>Slides</p>
+<p>Exercise sheet</p>
+<p>Data (from lectures and exercises)</p>
+<p>R - programs (for lectures and some exercises)</p>
+</div>
+<div id="week5" class="section level2">
+<h2>Day 5: December 16, 2020</h2>
+<p>Link to <a href="https://ucph-ku.zoom.us/j/65416958807">online teaching</a></p>
+<p>Slides</p>
+<p>Exercise sheet</p>
+<p>Data (from lectures and exercises)</p>
+<p>R - programs (for lectures and some exercises)</p>
+</div>
+<div id="week6" class="section level2">
+<h2>Day 6: January 6, 2021</h2>
+<p>Link to <a href="https://ucph-ku.zoom.us/j/65416958807">online teaching</a></p>
+<p>Slides</p>
+<p>Exercise sheet</p>
+<p>Data (from lectures and exercises)</p>
+<p>R - programs (for lectures and some exercises)</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
